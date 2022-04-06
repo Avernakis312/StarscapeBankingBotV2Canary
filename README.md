@@ -1,0 +1,1 @@
+# StarscapeBankingBotV2Canary
