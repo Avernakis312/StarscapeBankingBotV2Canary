@@ -9,8 +9,8 @@ class StarscapeBot(commands.Bot):
         intents = disnake.Intents.all()
         super().__init__(command_prefix="!", intents=intents)
     
-    async def setup_hook(self):
-        for filename in os.listdir("./cogs") -> None:
+    async def setup_hook(self) -> None:
+        for filename in os.listdir("./cogs"):
             if filename.endswith(".py"):
                 self.load_extension(f"cogs.{filename[:-3]}")
     
