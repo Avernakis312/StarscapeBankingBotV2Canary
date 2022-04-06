@@ -10,7 +10,7 @@ class StarscapeBot(commands.Bot):
         super().__init__(command_prefix="!", intents=intents)
     
     async def setup_hook(self):
-        for filename in os.listdir("./cogs"):
+        for filename in os.listdir("./cogs") -> None:
             if filename.endswith(".py"):
                 self.load_extension(f"cogs.{filename[:-3]}")
     
